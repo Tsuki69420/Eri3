@@ -1,0 +1,83 @@
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine's Day Fun!</title>
+<style>
+body {
+  background-color: yellow;
+  text-align: center;
+}
+
+.envelope {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-image: url("envelope.png"); /* Replace with your envelope image */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.card {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  **width: 350px; /* Adjusted card width */
+  **height: 250px; /* Adjusted card height */
+  background-color: #fff;
+  border: 2px solid pink;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card h1 {
+  font-family: cursive; /* Or any stylish font you prefer */
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 40px; /* Reduced image size */
+  height: 40px; /* Reduced image size */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card img:last-child {
+  right: 10px;
+  left: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="envelope"></div>
+
+<div class="card">
+  <p>Will you be my Valentine (just for fun),</p><p> so that we could hold hands (as a joke, ofc)</p><p> and maybe even kiss as the sun sets (as a joke too)? </p>
+  <img src="flower2.png" alt="Flower">
+  <img src="flower4.png" alt="Flower">
+</div>
+
+<script>
+const envelope = document.querySelector(".envelope");
+const card = document.querySelector(".card");
+
+envelope.addEventListener("mouseover", () => {
+  card.style.display = "block";
+});
+
+envelope.addEventListener("mouseout", () => {
+  card.style.display = "none";
+});
+</script>
+
+</body>
+</html>
